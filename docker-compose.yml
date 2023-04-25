@@ -1,0 +1,8 @@
+services:
+  routeros:
+    container_name: webinar-tst
+    image: mkovdk/webinar-test
+
+# "scale:" option for version 3 https://github.com/docker/compose/issues/5586
+    deploy:
+      replicas: 0
