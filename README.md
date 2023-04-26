@@ -1,4 +1,4 @@
-Default data (to change change in the playbook.yml file)
+Default data (to change in the playbook.yml file)
 
 - HOSTNAME
 - DATABASE
