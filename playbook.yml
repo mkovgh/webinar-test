@@ -4,6 +4,14 @@
   - PROJECT_NAME: webinar-test
   gather_facts: no
   tasks:
+  - name: Cretae Temporary env
+    shell: |
+      cat <<EOF > /tmp/my.env
+      HOSTNAME=172.17.0.3
+      DATABASE=webinar
+      USERNAME=test
+      PASSWORD=test
+      EOF
   - name: Docker Compose image from Docker Hub
     community.docker.docker_compose:
       project_name: "{{PROJECT_NAME}}"
@@ -12,7 +20,7 @@
         services:
           webinar-test:
             image: "{{IMAGE}}"
-#            env_file:
-#                - /tmp/my.env
+            env_file:
+                - /tmp/my.env
 #      scale:
 #        test: 2
