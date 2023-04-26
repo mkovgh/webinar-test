@@ -1,6 +1,6 @@
-Default data for php script (MySQL Database):
+Default data (to change change in the playbook.yml file)
 
-- hostname:localhost
-- username:root
-- password:test
-- datebase:webinar
+- HOSTNAME
+- DATABASE
+- USERNAME
+- PASSWORD
